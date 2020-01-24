@@ -5,4 +5,7 @@ export default Route.extend({
     return {nom:'Smith',
             details:'Détail du client Smith'}
   }
+  actions:{
+    
+  }
 });
