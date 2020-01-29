@@ -1,4 +1,18 @@
-<p> Note :</p>
-<Textarea @placeholder={{model.content}} @cols="80" @rows="6" />
 
+<p> Note :</p>
+<Textarea @value={{model.content}} @autofocus="true" @cols="80" @rows="6" maxlength=/>
+
+<br/>
+
+<button {{action "save" model}} class="btn btn-primary"> Enregistrer </button>
+
+<button {{action "clear" model}} class="btn btn-primary">Effacer</button>
+
+<br/>
+
+<div class={{model.style}}> nombre de caractères restants : {{model.size}} </div>
+
+{{#if model.alertVisible }}
+<div class="alert alert-primary"> {{model.info}}</div>
+{{/if}}
 {{outlet}}
