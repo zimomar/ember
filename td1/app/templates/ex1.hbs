@@ -1,6 +1,6 @@
-
-<p> Note :</p>
-<Textarea @value={{model.content}} @autofocus="true" @cols="80" @rows="6" maxlength=/>
+<div> Note :</div>
+<div>
+<Textarea @value={{model.content}} @autofocus="true" @cols="80" @rows="6" maxlength="{{model.MAX}}"/>
 
 <br/>
 
@@ -13,6 +13,7 @@
 <div class={{model.style}}> nombre de caractères restants : {{model.size}} </div>
 
 {{#if model.alertVisible }}
-<div class="alert alert-primary"> {{model.info}}</div>
+<div class="alert alert-primary transition: opacity 3s ease-in-out;"> {{model.info}}</div>
 {{/if}}
+</div>
 {{outlet}}

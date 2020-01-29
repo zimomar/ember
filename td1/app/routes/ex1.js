@@ -13,6 +13,7 @@ export default Route.extend({
     },
     clear(note){
       note.set("info","");
+      note.set("content","")
     }
 
   }
